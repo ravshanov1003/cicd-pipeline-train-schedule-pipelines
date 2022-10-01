@@ -4,8 +4,7 @@ pipeline{
     stage ('Build'){
       steps{
         echo 'Running build automation'
-        sh 'gradle wrapper --gradle-version 5.1 \
-        ./gradlew build --no-daemon'
+        sh './gradlew build --no-daemon'
         archiveArtifacts artifacts: 'dist/trainSchedule.zip'
       }
     }
